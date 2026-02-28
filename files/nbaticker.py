@@ -19,8 +19,9 @@ def fillScoreSheet(a, games):
     while x<len(games):
         a[x][0]=games[x]['homeTeam']['teamTricode']
         a[x][1]=games[x]['homeTeam']['score']
-        a[x][2]=games[x]['awayTeam']['teamTricode']
-        a[x][3]=games[x]['awayTeam']['score']
+        a[x][2]=games[x]['awayTeam']['score']
+        a[x][3]=games[x]['awayTeam']['teamTricode']
+        
         x += 1
 
 # Prints scoresheet
