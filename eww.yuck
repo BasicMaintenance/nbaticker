@@ -1,0 +1,23 @@
+(defpoll scores
+  :interval "1s"
+  "sh -c \"paste -sd ' ' /home/owen/.config/eww/NBATicker/scoreboard.txt\""
+)
+
+(defwindow ticker
+  :monitor 0
+  :geometry (geometry
+              :x "560px" 
+              :y "0%"       
+              :width "800"    
+              :height "28px")
+  :stacking "fg"
+  :exclusive false
+  :focusable false
+
+  (box
+    :class "ticker-container"
+    :orientation "h"
+    :halign "center"   
+    (label
+      :class "ticker-text"
+      :text scores)))
